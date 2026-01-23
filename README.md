@@ -1,1 +1,3 @@
-# PracticeExercises_KTTKPM_HK2_2026
+22683411
+Hà Thanh Tuấn
+DHKTPM18A
