@@ -1,0 +1,1 @@
+# PracticeExercises_KTTKPM_HK2_2026
