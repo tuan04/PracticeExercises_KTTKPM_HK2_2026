@@ -1,19 +1,24 @@
 package iuh.fit.StatePattern;
 
-public class CancelState implements State{
+public class CancelState implements State {
+    private final OrderContext orderContext;
+
+    public CancelState(OrderContext orderContext) {
+        this.orderContext = orderContext;
+    }
 
     @Override
-    public void delivery(OrderManager orderManager) {
+    public void delivery() {
         System.out.println("Đơn hàng đã hủy ! Không thể thực hiện hành động!");
     }
 
     @Override
-    public void pay(OrderManager orderManager) {
+    public void pay() {
         System.out.println("Đơn hàng đã hủy ! Không thể thực hiện hành động!");
     }
 
     @Override
-    public void cancel(OrderManager orderManager) {
+    public void cancel() {
         System.out.println("Đơn hàng đã hủy ! Không thể thực hiện hành động!");
     }
 }

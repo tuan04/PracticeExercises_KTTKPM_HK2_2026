@@ -1,20 +1,25 @@
 package iuh.fit.StatePattern;
 
 public class NewState implements State{
+    private final OrderContext orderContext;
 
-    @Override
-    public void delivery(OrderManager orderManager) {
-        System.out.println("Đơn hàng đang được vận chuyển !");
-        orderManager.setState(new ProcessingState());
+    public NewState (OrderContext orderContext){
+        this.orderContext = orderContext;
     }
 
     @Override
-    public void pay(OrderManager orderManager) {
+    public void delivery() {
+        System.out.println("Đơn hàng đang được vận chuyển !");
+        orderContext.setState(new ProcessingState(orderContext));
+    }
+
+    @Override
+    public void pay() {
         System.out.println("Đơn hàng chưa được đóng gói !");
     }
 
     @Override
-    public void cancel(OrderManager orderManager) {
+    public void cancel() {
         System.out.println("Đơn hàng chưa được đóng gói !");
     }
 }

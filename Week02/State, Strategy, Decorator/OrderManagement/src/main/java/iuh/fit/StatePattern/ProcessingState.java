@@ -1,20 +1,25 @@
 package iuh.fit.StatePattern;
 
-public class ProcessingState implements State{
+public class ProcessingState implements State {
+    private final OrderContext orderContext;
+
+    public ProcessingState(OrderContext orderContext) {
+        this.orderContext = orderContext;
+    }
 
     @Override
-    public void delivery(OrderManager orderManager) {
+    public void delivery() {
         System.out.println("Đơn hàng đang được giao. Không thể thực hiện hành động !");
     }
 
     @Override
-    public void pay(OrderManager orderManager) {
+    public void pay() {
         System.out.println("Đơn hàng đã được giao thành công !");
-        orderManager.setState(new DeliveredState());
+        orderContext.setState(new DeliveredState(orderContext));
     }
 
     @Override
-    public void cancel(OrderManager orderManager) {
+    public void cancel() {
         System.out.println("Hủy đơn hàng thành công");
     }
 }

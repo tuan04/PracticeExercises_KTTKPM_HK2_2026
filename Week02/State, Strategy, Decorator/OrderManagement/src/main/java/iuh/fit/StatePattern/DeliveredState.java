@@ -1,19 +1,24 @@
 package iuh.fit.StatePattern;
 
 public class DeliveredState implements State{
+    private final OrderContext orderContext;
+
+    public DeliveredState(OrderContext orderContext) {
+        this.orderContext = orderContext;
+    }
     @Override
-    public void delivery(OrderManager orderManager) {
+    public void delivery() {
         System.out.println("Đơn hàng đã được giao ! Không thể thực hiện hành động");
     }
 
     @Override
-    public void pay(OrderManager orderManager) {
+    public void pay() {
         System.out.println("Đơn hàng đã thanh toán ! Không thể thực hiện hành động");
     }
 
     @Override
-    public void cancel(OrderManager orderManager) {
+    public void cancel() {
         System.out.println("Hủy đơn hàng thành công");
-        orderManager.setState(new CancelState());
+        orderContext.setState(new CancelState(orderContext));
     }
 }
