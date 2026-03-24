@@ -8,7 +8,15 @@
         <option value="$PROJECT_DIR$/Week02/SingletonDemo/pom.xml" />
         <option value="$PROJECT_DIR$/Week02/State, Strategy, Decorator/OrderManagement/pom.xml" />
         <option value="$PROJECT_DIR$/Week02/State, Strategy, Decorator/pom.xml" />
+        <option value="$PROJECT_DIR$/TaxCalculation/pom.xml" />
+        <option value="$PROJECT_DIR$/LibraySystem/pom.xml" />
+        <option value="$PROJECT_DIR$/Week02/TaxCalculation/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/Week02/TaxCalculation/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="21" project-jdk-type="JavaSDK">
