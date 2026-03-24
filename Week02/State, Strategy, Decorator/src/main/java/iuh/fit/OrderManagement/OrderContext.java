@@ -1,4 +1,4 @@
-package iuh.fit.StatePattern;
+package iuh.fit.OrderManagement;
 
 public class OrderContext {
     private State state;

@@ -1,4 +1,4 @@
-package iuh.fit.StatePattern;
+package iuh.fit.OrderManagement;
 
 public class CancelState implements State {
     private final OrderContext orderContext;
