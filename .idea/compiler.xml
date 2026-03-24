@@ -8,7 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="SingletonDemo" />
         <module name="OAuthDemo" />
-        <module name="OrderManagement" />
+        <module name="State, Strategy, Decorator" />
       </profile>
     </annotationProcessing>
   </component>
