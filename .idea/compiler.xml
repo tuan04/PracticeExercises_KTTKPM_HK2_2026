@@ -10,6 +10,7 @@
         <module name="LibraySystem" />
         <module name="SingletonDemo" />
         <module name="OAuthDemo" />
+        <module name="ObserverCompositeAdapter" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
