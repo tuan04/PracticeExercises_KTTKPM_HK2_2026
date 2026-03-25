@@ -2,9 +2,9 @@ package iuh.fit.FolderManagement;
 
 public class Client {
     public static void main(String[] args) {
-        Folder KTTKPM = new Folder();
+        Folder KTTKPM = new Folder("KTTKPM");
 
-        Folder BTL = new Folder();
+        Folder BTL = new Folder("BTL");
         KTTKPM.add(BTL);
 
         File slideBaoCao = new File("BaoCao.pptx", "Slides báo cáo cuối kì", 40);

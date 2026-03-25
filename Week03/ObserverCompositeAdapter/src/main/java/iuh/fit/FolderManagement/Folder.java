@@ -3,9 +3,11 @@ package iuh.fit.FolderManagement;
 import java.util.ArrayList;
 
 public class Folder implements DataObject {
+    private String name;
     private ArrayList<DataObject> dataObjects;
 
-    public Folder() {
+    public Folder(String name) {
+        this.name = name;
         dataObjects = new ArrayList<>();
     }
 
@@ -23,6 +25,7 @@ public class Folder implements DataObject {
 
     @Override
     public void displayInformation() {
+        System.out.println("Folder: " + name);
         dataObjects.forEach(DataObject::displayInformation);
     }
 
