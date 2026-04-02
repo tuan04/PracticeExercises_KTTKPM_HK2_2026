@@ -1,0 +1,13 @@
+services:
+  postgres:
+    image: postgres:18-alpine
+    shm_size: 128mb
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: user
+      POSTGRES_DB: mydb
+
+  adminer: 
+    image: adminer
+    ports:
+      - 8083:8080

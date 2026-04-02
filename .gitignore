@@ -3,6 +3,8 @@ target/
 build/
 .gradle/
 
+**/node_modules/
+
 # Compiled
 *.class
 

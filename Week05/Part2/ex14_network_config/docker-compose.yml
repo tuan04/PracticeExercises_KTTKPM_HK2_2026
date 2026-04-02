@@ -1,0 +1,32 @@
+services:
+  mysql_db:
+    image: mysql:8.0
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: mydb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      timeout: 5s
+      retries: 10
+    networks:
+      - common_network
+
+  node_app:
+    build: ./node-app
+    ports:
+      - 3000:3000
+    depends_on:
+      mysql_db:
+        condition: service_healthy
+    networks:
+      - common_network
+
+networks:
+  common_network:
+    name: common_network
+    driver: bridge
+
